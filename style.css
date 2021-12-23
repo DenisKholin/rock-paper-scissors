@@ -8,12 +8,14 @@ body,
 html {
 	margin: 0;
 	padding: 0;
+	font-size: 62.5%;
 }
 
 h1 {
-	position: absolute;
-	left: 350px;
-	top: 50px;
+	font-size: 4rem;
+	width: 26.5rem;
+	display: flex;
+	justify-content: center;
 }
 
 .wrapper {
@@ -27,7 +29,7 @@ h1 {
 .comp,
 .me {
 	width: 46%;
-	height: 100%;
+	height: 70%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -38,8 +40,9 @@ h1 {
 .comp__img,
 .me__img {
 	width: 70%;
+	height: auto;
 	transition: 0.2s;
-	margin-top: 100px;
+	margin-top: 10rem;
 }
 
 .control {
@@ -53,7 +56,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 40px;
+	font-size: 4rem;
 	font-weight: bold;
 }
 
@@ -66,12 +69,12 @@ h1 {
 }
 
 .button {
-	width: 150px;
+	width: 15rem;
 	height: 20%;
 	outline: none;
 	background-color: transparent;
 	border: 2px solid #000;
-	border-radius: 10px;
+	border-radius: 1rem;
 	/* font-weight: 600; */
 	cursor: pointer;
 	text-transform: uppercase;
@@ -108,5 +111,45 @@ h1 {
 	}
 	100% {
 		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 49em) {
+	h1,
+	.score {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 37em) {
+	.wrapper {
+		flex-direction: column;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.score {
+		font-size: 2.5rem;
+	}
+
+	.control {
+		height: 20%;
+	}
+
+	.buttons {
+		height: 75%;
+	}
+
+	.comp__img,
+	.me__img {
+		margin-top: 2rem;
+	}
+
+	.comp,
+	.me {
+		width: 50%;
+		height: 40%;
 	}
 }

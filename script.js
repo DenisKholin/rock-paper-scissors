@@ -47,20 +47,6 @@ function setCompImg(src) {
 	}, 2000);
 }
 
-// function setImg(selector, src) {
-// 	setTimeout(() => {
-// 		selector.setAttribute('src', src);
-// 		selector.classList.remove('fade');
-// 		console.log(result);
-// 		if (result == 'Вы проиграли') {
-// 			compScore += 1;
-// 			compScoreSelector.innerHTML = `${compScore}`;
-// 		} else if (result == 'Вы выиграли') {
-// 			meScore += 1;
-// 			meScoreSelector.innerHTML = `${meScore}`;
-// 		}
-// 	}, 2000);
-// }
 
 function getRandomInt(min, max) {
 	min = Math.ceil(min);
