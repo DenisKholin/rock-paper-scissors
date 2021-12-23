@@ -26,11 +26,10 @@ function animation(selector) {
 	selector.classList.add('fade');
 }
 
-function setImg(selector, src) {
+function setMyImg(src) {
 	setTimeout(() => {
-		selector.setAttribute('src', src);
-		selector.classList.remove('fade');
-		console.log(result);
+		meImg.setAttribute('src', src);
+		meImg.classList.remove('fade');
 		if (result == 'Вы проиграли') {
 			compScore += 1;
 			compScoreSelector.innerHTML = `${compScore}`;
@@ -40,6 +39,28 @@ function setImg(selector, src) {
 		}
 	}, 2000);
 }
+
+function setCompImg(src) {
+	setTimeout(() => {
+		compImg.setAttribute('src', src);
+		compImg.classList.remove('fade');
+	}, 2000);
+}
+
+// function setImg(selector, src) {
+// 	setTimeout(() => {
+// 		selector.setAttribute('src', src);
+// 		selector.classList.remove('fade');
+// 		console.log(result);
+// 		if (result == 'Вы проиграли') {
+// 			compScore += 1;
+// 			compScoreSelector.innerHTML = `${compScore}`;
+// 		} else if (result == 'Вы выиграли') {
+// 			meScore += 1;
+// 			meScoreSelector.innerHTML = `${meScore}`;
+// 		}
+// 	}, 2000);
+// }
 
 function getRandomInt(min, max) {
 	min = Math.ceil(min);
@@ -51,13 +72,14 @@ function prepare() {
 	compNum = getRandomInt(0, 3);
 	animation(meImg);
 	animation(compImg);
-	setImg(compImg, randomNumbers[compNum]);
+	setCompImg(randomNumbers[compNum]);
+	console.log(randomNumbers[compNum]);
 }
 
 
 rockBtn.addEventListener('click', () => {
 	prepare();
-	setImg(meImg, 'img/rock.png');
+	setMyImg('img/rock.png');
 	if (compNum == 0) {
 		result = 'Ничья';
 	} else if (compNum == 1) {
@@ -71,7 +93,7 @@ rockBtn.addEventListener('click', () => {
 
 paperBtn.addEventListener('click', () => {
 	prepare();
-	setImg(meImg, 'img/paper.png');
+	setMyImg('img/paper.png');
 	if (compNum == 0) {
 		result = 'Вы выиграли';
 	} else if (compNum == 1) {
@@ -84,7 +106,7 @@ paperBtn.addEventListener('click', () => {
 
 scissorsBtn.addEventListener('click', () => {
 	prepare();
-	setImg(meImg, 'img/scissors.png');
+	setMyImg('img/scissors.png');
 	if (compNum == 0) {
 		result = 'Вы проиграли';
 	} else if (compNum == 1) {
