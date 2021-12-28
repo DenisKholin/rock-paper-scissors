@@ -9,7 +9,6 @@ const
 	compScoreSelector = document.querySelector('.comp__score');
 
 let
-	meNum,
 	compNum,
 	meScore = 0,
 	compScore = 0,
@@ -19,8 +18,6 @@ let
 		1: 'img/paper.png',
 		2: 'img/scissors.png'
 	};
-
-
 
 function animation(selector) {
 	selector.classList.add('fade');
@@ -62,7 +59,6 @@ function prepare() {
 	console.log(randomNumbers[compNum]);
 }
 
-
 rockBtn.addEventListener('click', () => {
 	prepare();
 	setMyImg('img/rock.png');
@@ -70,7 +66,6 @@ rockBtn.addEventListener('click', () => {
 		result = 'Ничья';
 	} else if (compNum == 1) {
 		result = 'Вы проиграли';
-
 	} else {
 		result = 'Вы выиграли';
 
@@ -88,7 +83,6 @@ paperBtn.addEventListener('click', () => {
 		result = 'Вы проиграли';
 	}
 });
-
 
 scissorsBtn.addEventListener('click', () => {
 	prepare();
