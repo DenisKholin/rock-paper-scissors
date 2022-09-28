@@ -10,9 +10,9 @@ let
 	meScore = 0,
 	compScore = 0,
 	imgNumb = {
-		0: 'img/rock.png',
-		1: 'img/paper.png',
-		2: 'img/scissors.png'
+		0: 'img/rock.webp',
+		1: 'img/paper.webp',
+		2: 'img/scissors.webp'
 	};
 
 function animation(selector) {
