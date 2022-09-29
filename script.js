@@ -1,4 +1,5 @@
 const
+	buttons = document.querySelectorAll('.button'),
 	meImg = document.querySelector('.me__img'),
 	compImg = document.querySelector('.comp__img'),
 	meScoreSelector = document.querySelector('.me__score'),
@@ -17,6 +18,7 @@ let
 
 function animation(selector) {
 	selector.classList.add('fade');
+	selector.setAttribute('src', imgNumb[0]);
 }
 
 function switchImg(selector, src) {
@@ -40,6 +42,9 @@ function setMyImg(src) {
 function setCompImg(src) {
 	setTimeout(() => {
 		switchImg(compImg, src)
+		buttons.forEach(el => {
+			el.removeAttribute('disabled')
+		})
 	}, 2000);
 }
 
@@ -52,6 +57,9 @@ function prepare() {
 
 function play(btnSelector, img, win, lose) {
 	document.querySelector(btnSelector).addEventListener('click', () => {
+		buttons.forEach(el => {
+			el.setAttribute('disabled', 'true')
+		})
 		prepare();
 		setMyImg(img);
 		if (compNum == win) {
