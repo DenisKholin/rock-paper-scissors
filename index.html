@@ -13,35 +13,44 @@
 <body>
 	<div class="wrapper">
 
-		<div class="me">
+		<div class="title">
 			<h1>PLAYER</h1>
-			<div class="img__wrapper">
-				<img src="img/rock.webp" alt="" class="me__img">
-
-			</div>
+			<h1>COMPUTER</h1>
 		</div>
-		<div class="control">
+
+		<div class="wrapper__play">
+
+			<div class="me">
+				<img src="img/rock.webp" alt="sign" class="sign__img me__img">
+			</div>
+
 			<div class="score">
 				<p class="me__score">0</p>
 				:
 				<p class="comp__score">0</p>
 			</div>
-			<div class="buttons">
-				<button class="button" id="rockBtn">Rock</button>
-				<button class="button" id="paperBtn">Paper</button>
-				<button class="button" id="scissorsBtn">Scissors</button>
+
+			<div class="comp">
+				<img src="img/rock.webp" alt="sign" class="sign__img comp__img">
 			</div>
+
 		</div>
 
-		<div class="comp">
-			<h1>COMPUTER</h1>
-			<div class="img__wrapper">
-				<img src="img/rock.webp" alt="" class="comp__img">
 
-			</div>
+		<div class="buttons">
+			<button class="button" id="rockBtn">
+				<img src="img/rock.webp" alt="rock" class="button__img">
+			</button>
+			<button class="button" id="paperBtn">
+				<img src="img/paper.webp" alt="paper" class="button__img">
+			</button>
+			<button class="button" id="scissorsBtn">
+				<img src="img/scissors.webp" alt="scissors" class="button__img">
+			</button>
 		</div>
 
 	</div>
+
 
 	<script src="script.js"></script>
 </body>
